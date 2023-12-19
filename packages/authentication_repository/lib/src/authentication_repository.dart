@@ -27,5 +27,5 @@ class AuthenticationRepository {
 
   void dispose() => _controller.close();
 }
-//AuthenticationRepository จะ exposes Stream ของ AuthenticationStatus อัพเดตเพื่อที่จะใช้สำรหรับแจ้งตัวApp เมื่อ user เข้าใช้หรือออก
+//AuthenticationRepository จะ exposes Stream ของ AuthenticationStatus อัพเดตเพื่อที่จะใช้สำหรับแจ้งตัวApp เมื่อ user เข้าใช้หรือออก
 //

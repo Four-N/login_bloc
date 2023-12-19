@@ -15,7 +15,9 @@ class AuthenticationBloc
     required UserRepository userRepository,
   })  : _authenticationRepository = authenticationRepository,
         _userRepository = userRepository,
-        super(const AuthenticationState.unknown()) {
+        super(const AuthenticationState.unknown())
+  //ใช้ dependencies ของ  Auth Repo และ User Repo มากำหนดค่าเริ่มต้นใหม่เป็น AuthenticationState.unknown()
+  {
     on<_AuthenticationStatusChanged>(
         _onAuthenticationStatusChanged); //จะถูกเรียกเมื่อมีการเปลี่ยนแปลงสถานะ
     on<AuthenticationLogoutRequested>(
@@ -37,6 +39,7 @@ class AuthenticationBloc
     return super.close(); //ไว้ยกเลิกการตรวจสอบ authen
   }
 
+  //เมื่อ AuthStatusChanged มีการเพิ่ม event สถานะที่เกียวข้องคือ AuthStatus.authenticated ,Auth Bloc จะ queries user ผ่าน UserRepo
   Future<void> _onAuthenticationStatusChanged(
     _AuthenticationStatusChanged event,
     Emitter<AuthenticationState> emit,

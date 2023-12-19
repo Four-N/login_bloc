@@ -12,3 +12,4 @@ class Password extends FormzInput<String, PasswordValidationError> {
     return null;
   }
 }
+//ทำการ Validate ให้ password ไม่เป็น ค่าว่าง"

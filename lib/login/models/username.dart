@@ -12,3 +12,4 @@ class Username extends FormzInput<String, UsernameValidationError> {
     return null;
   }
 }
+//ทำการ Validate ให้ username ไม่เป็น ค่าว่าง"

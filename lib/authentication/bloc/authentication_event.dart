@@ -12,10 +12,12 @@ final class _AuthenticationStatusChanged extends AuthenticationEvent {
   @override
   // TODO: implement props
   List<Object?> get props => throw UnimplementedError();
+  // แจ้งเตือนให้ bloc ของการเปลี่ยนแปลง Status ของผู้ใช้
 }
 
 final class AuthenticationLogoutRequested extends AuthenticationEvent {
   @override
   // TODO: implement props
   List<Object?> get props => throw UnimplementedError();
+  // แจ้งเตือนให้ bloc ของการขอ logout
 }
